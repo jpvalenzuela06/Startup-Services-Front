@@ -1,0 +1,24 @@
+
+<div class="container">
+    <form [formGroup]="formSingUp" (submit)="send()">
+        <label > user </label>
+        <input type="text" id="user" class="form-control form-control-lg" formControlName="username" />
+        <label > password </label>
+        <input type="password" id="password" class="form-control form-control-lg" formControlName="password" />
+        <label > Contact </label>
+        <input type="text" id="contact" class="form-control form-control-lg" formControlName="contact" />
+        <fieldset>
+            <legend>Elige tu rol</legend>
+            <label>
+              <input type="radio"  value="Customer" formControlName="rol"> 
+                Cliente
+            </label>
+            <label>
+                <input type="radio"  value="Provider" formControlName="rol">
+                    Proveedor
+            </label>
+        </fieldset>
+        <button class="btn btn btn-outline-dark btn-lg px-5" [disabled]="formSingUp.invalid">Registrarse</button>
+
+    </form>
+</div>

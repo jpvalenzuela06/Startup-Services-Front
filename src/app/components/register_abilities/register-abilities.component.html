@@ -1,0 +1,14 @@
+<div class="container">
+    <form [formGroup]="formRegisterAbility" (submit)="send()">
+        <label > Tarea </label>
+        <select name="miselect" class="form-select" aria-label="Default select example" formControlName="category" >
+            <option *ngFor="let category of listCategories">{{category.task}}</option>
+        </select>
+        <label > Precio del servicio </label>
+        <input type="number" id="servicePrice" class="form-control form-control-lg" formControlName="servicePrice" />
+        <label > Distancia de covertura </label>
+        <input type="number" id="distanceCoverage" class="form-control form-control-lg" formControlName="distanceCoverage" />
+        <button class="btn btn btn-outline-dark btn-lg px-5" [disabled]="formRegisterAbility.invalid">Registrarse</button>
+    </form>
+</div>
+
